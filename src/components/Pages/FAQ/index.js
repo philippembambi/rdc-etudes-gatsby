@@ -19,6 +19,7 @@ const FAQ = () => {
             <StaticImage
               src="../../../images/iStock-1201429665-scaled-p8d527vaag9nez64eb4yun06jz963plbww2kuwdfdc-removebg-preview2.png"
               alt="img student"
+              width={300}
             />
           </div>
         </div>
