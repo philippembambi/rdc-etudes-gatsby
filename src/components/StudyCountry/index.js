@@ -1,14 +1,6 @@
 import React from "react";
 import * as styles from "./styles.module.scss";
-
-import overlay2 from "../../images/Rectangle5.png";
-import img3 from "../../images/4564198_2400445 1.png";
-import img4 from "../../images/earth-with-plane-drawing-png.png";
-import img5 from "../../images/Download_A_tourist_element_on_white_background_for_free-removebg-preview.png";
-import img6 from "../../images/pngtree-cartoon-paper-airplane-png-image_1195649-removebg-preview.png";
-import img7 from "../../images/World_Of_Empires_Travel_Tourism_Landmark_PNG_-_Free_Download-removebg-preview 1.png";
-import img8 from "../../images/tour_effeil.png";
-import img9 from "../../images/flatten.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 const StudyCountry = () => {
   return (
@@ -19,13 +11,20 @@ const StudyCountry = () => {
           <div className="">&nbsp;</div>
           <div className="">&nbsp;</div>
           <div className="">
-            <img src={img4} style={{ height: "60px" }} />
+            <StaticImage
+              height={60}
+              alt="plane"
+              src="../../images/earth-with-plane-drawing-png.png"
+            />
           </div>
         </div>
 
         <div class="grid grid-cols-8">
           <div className="col-span-3">
-            <img src={img3} />
+            <StaticImage
+              alt="travelers"
+              src="../../images/4564198_2400445 1.png"
+            />
           </div>
 
           <div className="col-span-5 px-1">
@@ -41,21 +40,37 @@ const StudyCountry = () => {
 
         <div class="grid grid-cols-4 gap-4">
           <div className="">
-            <img src={img6} style={{ height: "80px" }} />
+            <StaticImage
+              height={80}
+              alt="plane"
+              src="../../images/pngtree-cartoon-paper-airplane-png-image_1195649-removebg-preview.png"
+            />
           </div>
           <div className="">&nbsp;</div>
           <div className="">&nbsp;</div>
           <div className="">
-            <img src={img5} style={{ height: "2.2rem" }} />
+            <StaticImage
+              height={80}
+              alt="tourist"
+              src="../../images/Download_A_tourist_element_on_white_background_for_free-removebg-preview.png"
+            />
           </div>
         </div>
       </section>
 
       <section className="mb-10">
-        <div className={styles.travel_countries} id="contact_section">
-          <img src={img7} />
+        <div className={styles.travel_countries}>
+          <StaticImage
+            className={styles.travel_countries__img}
+            alt="travel"
+            src="../../images/World_Of_Empires.png"
+          />
           <div className={styles.travel_countries_inner}>
-            <img src={overlay2} />
+            <StaticImage
+              alt="Overlay"
+              className={styles.travel_countries_inner__img}
+              src="../../images/Rectangle5.png"
+            />
 
             <div className={styles.travel_countries_content}>
               <div className="flex justify-center">
@@ -89,7 +104,11 @@ const StudyCountry = () => {
                   <div className="col-span-5">
                     <div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                       <div class="relative overflow-hidden bg-cover bg-no-repeat">
-                        <img class="rounded-t-lg" src={img8} alt="" />
+                        <StaticImage
+                          class="rounded-t-lg"
+                          alt="tour"
+                          src="../../images/tour_effeil.jpg"
+                        />
                       </div>
                       <div class="p-6">
                         <p
@@ -105,7 +124,11 @@ const StudyCountry = () => {
                   <div className="col-span-5">
                     <div class="block max-w-[18rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
                       <div class="relative overflow-hidden bg-cover bg-no-repeat">
-                        <img class="rounded-t-lg" src={img8} alt="" />
+                        <StaticImage
+                          class="rounded-t-lg"
+                          alt="tour"
+                          src="../../images/flatten.jpg"
+                        />
                       </div>
                       <div class="p-6">
                         <p
