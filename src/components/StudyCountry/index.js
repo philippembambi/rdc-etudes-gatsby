@@ -14,6 +14,7 @@ const StudyCountry = () => {
             <StaticImage
               height={60}
               alt="plane"
+              placeholder="blurred"
               src="../../images/earth-with-plane-drawing-png.png"
             />
           </div>
@@ -23,6 +24,7 @@ const StudyCountry = () => {
           <div className="col-span-3">
             <StaticImage
               alt="travelers"
+              placeholder="blurred"
               src="../../images/4564198_2400445 1.png"
             />
           </div>
@@ -42,6 +44,7 @@ const StudyCountry = () => {
           <div className="">
             <StaticImage
               height={80}
+              placeholder="blurred"
               alt="plane"
               src="../../images/pngtree-cartoon-paper-airplane-png-image_1195649-removebg-preview.png"
             />
@@ -52,6 +55,7 @@ const StudyCountry = () => {
             <StaticImage
               height={80}
               alt="tourist"
+              placeholder="blurred"
               src="../../images/Download_A_tourist_element_on_white_background_for_free-removebg-preview.png"
             />
           </div>
@@ -64,12 +68,14 @@ const StudyCountry = () => {
             className={styles.travel_countries__img}
             alt="travel"
             src="../../images/World_Of_Empires.png"
+            placeholder="blurred"
           />
           <div className={styles.travel_countries_inner}>
             <StaticImage
               alt="Overlay"
               className={styles.travel_countries_inner__img}
               src="../../images/Rectangle5.png"
+              placeholder="blurred"
             />
 
             <div className={styles.travel_countries_content}>
@@ -79,6 +85,8 @@ const StudyCountry = () => {
                     <button
                       class="absolute left-4 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full top-16"
                       type="button"
+                      id="travelPrevBtn"
+                      aria-label="travelPrevBtn"
                       data-te-target="#carouselExampleIndicators"
                       data-te-slide="prev"
                     >
@@ -107,13 +115,12 @@ const StudyCountry = () => {
                         <StaticImage
                           class="rounded-t-lg"
                           alt="tour"
+                          placeholder="blurred"
                           src="../../images/tour_effeil.jpg"
                         />
                       </div>
                       <div class="p-6">
-                        <p
-                          class="text-base text-neutral-600"
-                          style={{ color: "#0490DF", fontWeight: "800" }}
+                        <p class="text-base text-sky-600 font-extrabold"
                         >
                           FRANCE
                         </p>
@@ -127,13 +134,13 @@ const StudyCountry = () => {
                         <StaticImage
                           class="rounded-t-lg"
                           alt="tour"
+                          placeholder="blurred"
                           src="../../images/flatten.jpg"
                         />
                       </div>
                       <div class="p-6">
                         <p
-                          class="text-base text-neutral-600"
-                          style={{ color: "#0490DF", fontWeight: "800" }}
+                          class="text-base text-sky-600 font-extrabold"
                         >
                           CANADA
                         </p>
@@ -147,6 +154,8 @@ const StudyCountry = () => {
                       type="button"
                       data-te-target="#carouselExampleIndicators"
                       data-te-slide="prev"
+                      id="travelNextbtn"
+                      aria-label="travelNextbtn"
                     >
                       <span class="inline-block h-8 w-8">
                         <svg

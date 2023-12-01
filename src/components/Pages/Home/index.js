@@ -2,10 +2,6 @@ import * as React from "react";
 import Layout from "../../../components/Layout";
 import * as style from "./styles.module.scss";
 
-import news_img2 from "../../../images/jeune-femme-entree-ecole-lit-livre.jpg";
-import news_img3 from "../../../images/beau-routard-homme.jpg";
-import news_img4 from "../../../images/etudiante-africaine-posee.jpg";
-
 import StudyCountry from "../../../components/StudyCountry";
 import Scholarship from "../../../components/Scholarship";
 import ContactForm from "../../../components/ContactForm";
@@ -17,7 +13,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import SecondaryBtn from "../../Button/Secondary";
 import PrimaryBtn from "../../Button/Primary";
 
-const Home = () => {
+const Home = ({ newsCardItems }) => {
   return (
     <Layout pageTitle="Page d'acceuil">
       <div className={"md:hidden " + style.firstSection}>
@@ -100,6 +96,7 @@ const Home = () => {
           <StaticImage
             height={1600}
             width={1800}
+            placeholder="blurred"
             alt="Agence"
             src="../../../images/Agence-M-Com-Marseille-AppartStudy-Marne-Montpellier-Residence.png"
           />
@@ -131,27 +128,14 @@ const Home = () => {
           <div class="h-4 w-full border-b-2 border-sky-600"></div>
         </div>
 
-        <NewsCard
-          image={news_img2}
-          title={"Titre de l'article"}
-          desc={
-            "Lorem ispum dolor fortuna simpre cresis, out decresis vita detastabilis Lorem ispum dolor fortuna simpre cresis, out decresis"
-          }
-        />
-        <NewsCard
-          image={news_img3}
-          title={"Titre de l'article"}
-          desc={
-            "Lorem ispum dolor fortuna simpre cresis, out decresis vita detastabilis Lorem ispum dolor fortuna simpre cresis, out decresis"
-          }
-        />
-        <NewsCard
-          image={news_img4}
-          title={"Titre de l'article"}
-          desc={
-            "Lorem ispum dolor fortuna simpre cresis, out decresis vita detastabilis Lorem ispum dolor fortuna simpre cresis, out decresis"
-          }
-        />
+        {newsCardItems.map((newsCardItem) => {
+          return (
+            <NewsCard
+              key={newsCardItem.frontmatter.title}
+              ItemData={newsCardItem.frontmatter}
+            />
+          );
+        })}
       </section>
 
       <section className="mb-5">
@@ -162,47 +146,47 @@ const Home = () => {
         </div>
 
         <div class="container relative z-40 mx-auto px-5 ">
-          <div class="flex flex-wrap justify-center mx-auto lg:w-full md:w-5/6 xl:shadow-small-blue">
-            <a href="#" class="block w-1/3 py-10 text-center lg:w-1/4">
-              <div>
-                <StaticImage
-                  src="../../../images/logo_243.png"
-                  class="block mx-auto"
-                  alt="Logo"
-                />
-                <p class="pt-4 text-sm font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
-                  243 technologies
-                </p>
-              </div>
-            </a>
+          <div className="grid grid-cols-3 py-10 text-center">
+            <div>
+              <StaticImage
+                src="../../../images/logo_243.png"
+                class="block mx-auto"
+                placeholder="blurred"
+                alt="logo"
+                objectFit="contain"
+              />
 
-            <a href="#" class="block w-1/3 py-10 text-center lg:w-1/4">
-              <div>
-                <StaticImage
-                  src="../../../images/logo.png"
-                  class="block mx-auto"
-                  alt="logo"
-                />
+              <p class="pt-4 text-sm font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
+                243 technologies
+              </p>
+            </div>
 
-                <p class="pt-4 text-sm font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
-                  RDC Etudes
-                </p>
-              </div>
-            </a>
+            <div>
+              <StaticImage
+                src="../../../images/logo.png"
+                class="block mx-auto"
+                placeholder="blurred"
+                alt="logo"
+                objectFit="contain"
+              />
 
-            <a href="#" class="block w-1/3 py-10 text-center lg:w-1/4">
-              <div>
-                <StaticImage
-                  src="../../../images/logo_243.png"
-                  class="block mx-auto"
-                  alt="logo"
-                />
+              <p class="pt-4 text-sm font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
+                RDC Etudes
+              </p>
+            </div>
 
-                <p class="pt-4 text-sm font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
-                  243 technologies
-                </p>
-              </div>
-            </a>
+            <div>
+              <StaticImage
+                src="../../../images/logo_243.png"
+                class="block mx-auto"
+                placeholder="blurred"
+                alt="Logo"
+                objectFit="contain"
+              />
+              <p class="pt-4 text-sm font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
+                243 technologies
+              </p>
+            </div>
           </div>
         </div>
       </section>

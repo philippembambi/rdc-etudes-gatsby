@@ -22,13 +22,13 @@ const Scholarship = () => {
           <div className={style.scholarship}>
             <StaticImage
               className={style.scholarship__overlay}
-              alt='plane'
+              alt="plane"
               src="../../images/depositphotos_42487119-stock-photo-good-looking-african-graduate.png"
             />
             <div className={style.scholarship_inner}>
               <StaticImage
                 className={style.scholarship_inner__overlay}
-                alt='overlay'
+                alt="overlay"
                 src="../../images/Rectangle10.png"
               />
               <div className={style.scholarship__content}>
@@ -41,11 +41,13 @@ const Scholarship = () => {
                   >
                     <div>
                       <button
-                        class="absolute left-4 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full"
+                        class="absolute left-2 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full"
                         type="button"
                         data-te-target="#carouselExampleIndicators"
                         data-te-slide="prev"
                         style={{ top: "90px" }}
+                        id="scholarshipPrevBtn"
+                        aria-label="scholarshipPrevBtn"
                       >
                         <span class="inline-block h-8 w-8">
                           <svg
@@ -83,11 +85,13 @@ const Scholarship = () => {
 
                     <div>
                       <button
-                        class="absolute right-4 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full"
+                        class="absolute right-2 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full"
                         type="button"
                         data-te-target="#carouselExampleIndicators"
                         data-te-slide="prev"
                         style={{ top: "90px" }}
+                        id="scholarshipNextBtn"
+                        aria-label="scholarshipNextBtn"
                       >
                         <span class="inline-block h-8 w-8">
                           <svg
