@@ -16,7 +16,7 @@ const ContactForm = ({ title, bgImg, marginBottom }) => {
           </div>
 
           <div>
-            <div class="flex justify-center w-full z-10 absolute">
+            <div className="flex justify-center w-full z-10 absolute">
               <div className="">
                 <div>
                   <input
@@ -35,11 +35,11 @@ const ContactForm = ({ title, bgImg, marginBottom }) => {
                 </div>
 
                 <div>
-                  <textarea className={styles.form__textarea}>Message</textarea>
+                  <textarea className={styles.form__textarea} aria-label='Message' defaultValue={"Message"} />
                 </div>
 
                 <div className="py-4">
-                  <button class="bg-sky-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                  <button className="bg-sky-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
                     Envoyer
                   </button>
                 </div>

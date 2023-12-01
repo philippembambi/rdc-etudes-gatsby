@@ -1,8 +1,6 @@
 import React from 'react';
 import * as style from "./styles.module.scss";
-
-import img6 from "../../images/800x600_FE_WEB_equivalence 2.jpg";
-import BourseCard from '../BourseCard';
+import { Carousel } from 'flowbite-react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Scholarship = () => {
@@ -14,8 +12,8 @@ const Scholarship = () => {
               Bourses d'études
             </span>{" "}
             <p>
-              Lorem ispum dolor fortuna simpre cresis, out decresis vita
-              detastabilis Lorem ispum dolor fortuna simpre cresis, out decresis
+              Découvrez nos meilleurs programmes de bourse qui vous assure un
+              voyage réussi
             </p>
           </div>
 
@@ -32,87 +30,41 @@ const Scholarship = () => {
                 src="../../images/Rectangle10.png"
               />
               <div className={style.scholarship__content}>
-                <div className="flex justify-center">
-                  <div
-                    class={
-                      "grid grid-cols-16 gap-4 " +
-                      style.scholarship__bourse_card
-                    }
-                  >
-                    <div>
-                      <button
-                        class="absolute left-2 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full"
-                        type="button"
-                        data-te-target="#carouselExampleIndicators"
-                        data-te-slide="prev"
-                        style={{ top: "90px" }}
-                        id="scholarshipPrevBtn"
-                        aria-label="scholarshipPrevBtn"
-                      >
-                        <span class="inline-block h-8 w-8">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="4.5"
-                            stroke="currentColor"
-                            class="h-6 w-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M15.75 19.5L8.25 12l7.5-7.5"
-                            />
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
 
-                    <div className="col-span-7">
-                      <BourseCard
-                        img={img6}
-                        setDescription={false}
-                        textSize={"sm"}
+                <Carousel slide={true} indicators={false}>
+                  <div className="block max-w-[15rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                    <div className="relative overflow-hidden bg-cover bg-no-repeat">
+                      <StaticImage
+                        className="rounded-t-lg"
+                        alt="tour"
+                        placeholder="blurred"
+                        src="../../images/800x600_FE_WEB_equivalence 2.jpg"
                       />
                     </div>
-                    <div className="col-span-7">
-                      <BourseCard
-                        img={img6}
-                        setDescription={false}
-                        textSize={"sm"}
-                      />
-                    </div>
-
-                    <div>
-                      <button
-                        class="absolute right-2 z-[1] flex h-10 w-10 items-center justify-center text-center bg-white hover:bg-blue-700 text-blue-500 font-bold py-2 px-4 rounded-full"
-                        type="button"
-                        data-te-target="#carouselExampleIndicators"
-                        data-te-slide="prev"
-                        style={{ top: "90px" }}
-                        id="scholarshipNextBtn"
-                        aria-label="scholarshipNextBtn"
-                      >
-                        <span class="inline-block h-8 w-8">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="4.5"
-                            stroke="currentColor"
-                            class="h-6 w-6"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                            />
-                          </svg>
-                        </span>
-                      </button>
+                    <div className="p-6">
+                      <p className="text-base text-sky-600 font-extrabold capitalize">
+                        Bourse d'études
+                      </p>
                     </div>
                   </div>
-                </div>
+
+                  <div className="block max-w-[15rem] rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+                    <div className="relative overflow-hidden bg-cover bg-no-repeat">
+                      <StaticImage
+                        className="rounded-t-lg"
+                        alt="tour"
+                        placeholder="blurred"
+                        src="../../images/800x600_FE_WEB_equivalence 2.jpg"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <p className="text-base text-sky-600 font-extrabold capitalize">
+                        Bourse d'études
+                      </p>
+                    </div>
+                  </div>
+
+                </Carousel>
               </div>
             </div>
           </div>
