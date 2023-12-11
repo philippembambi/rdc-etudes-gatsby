@@ -27,18 +27,38 @@ module.exports = {
       __key: `images`,
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `news`,
-        path: `${__dirname}/src/data/news`,
+        path: `${__dirname}/src/static/images/uploads`,
+        name: `uploaded-images`,
       },
-      __key: `news`,
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/guides/`,
+        name: `guides`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/articles/`,
+        name: `articles`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/data/scholarships/`,
+        name: `scholarships`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "pages",
-        path: "./src/pages/",
+        path: `${__dirname}/src/pages/`,
       },
       __key: `pages`,
     },

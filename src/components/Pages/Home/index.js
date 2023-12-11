@@ -8,12 +8,13 @@ import ContactForm from "../../../components/ContactForm";
 import NewsCard from "../../NewsCard";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 import { StaticImage } from "gatsby-plugin-image";
 import SecondaryBtn from "../../Button/Secondary";
 import PrimaryBtn from "../../Button/Primary";
 
-const Home = ({ newsCardItems }) => {
+const Home = ({ guideCountries, articles, scholarships }) => {
+  console.log("articles : ", articles);
   return (
     <Layout pageTitle="Page d'acceuil">
       <div className={"md:hidden " + style.firstSection}>
@@ -30,29 +31,16 @@ const Home = ({ newsCardItems }) => {
           />
 
           <div className={style.contact_content}>
-            <div className="flex text-start">
-              <div className="grid grid-rows-3 py-4">
-                <div>
-                  <h1
-                    className={
-                      "text-4xl text-white font-black uppercase " +
-                      style.firstSection__title
-                    }
-                  >
-                    Rdc études
-                  </h1>
-                </div>
-                <div
-                  className={
-                    "text-sm text-white mb-3 " + style.firstSection__desc
-                  }
-                >
-                  Nous vous accompagnons dans la réussite de votre projet
-                  d’études, de l’admission à l’obtention de votre diplôme !
-                </div>
-                <div>
-                  <SecondaryBtn text={"Demander une assistance"} />
-                </div>
+            <div className="text-start">
+              <div className="text-4xl text-white font-black uppercase mt-2 mb-4">
+                Rdc études
+              </div>
+              <div className="text-lg text-white mb-4">
+                Nous vous accompagnons dans la réussite de votre projet
+                d’études, de l’admission à l’obtention de votre diplôme !
+              </div>
+              <div>
+                <SecondaryBtn text={"Demander une assistance"} />
               </div>
             </div>
           </div>
@@ -116,8 +104,16 @@ const Home = ({ newsCardItems }) => {
         />
       </div>
 
-      <StudyCountry />
-      <Scholarship />
+      <StudyCountry guideCountries={guideCountries} />
+      <Scholarship scholarships={scholarships} />
+
+      <p className="text-center mb-10">
+        <PrimaryBtn fontSize={"text-sm"} text={"Afficher toutes les bourses"}>
+          <i className="px-2">
+            <FontAwesomeIcon icon={faArrowRight} />
+          </i>
+        </PrimaryBtn>
+      </p>
 
       <section className="mb-5">
         <div className="text-left px-8 mb-5">
@@ -127,14 +123,21 @@ const Home = ({ newsCardItems }) => {
           <div className="h-4 w-full border-b-2 border-sky-600"></div>
         </div>
 
-        {newsCardItems.map((newsCardItem) => {
+        {articles.map((article) => {
           return (
             <NewsCard
-              key={newsCardItem.frontmatter.title}
-              ItemData={newsCardItem.frontmatter}
+              key={article.frontmatter.title}
+              ItemData={article.frontmatter}
             />
           );
         })}
+        <p className="text-center py-3">
+          <PrimaryBtn fontSize={"text-sm"} text={"Voir plus"}>
+            <i className="px-2">
+              <FontAwesomeIcon icon={faArrowRight} />
+            </i>
+          </PrimaryBtn>
+        </p>
       </section>
 
       <section className="mb-5">
