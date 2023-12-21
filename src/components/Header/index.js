@@ -41,8 +41,6 @@ const Header = () => {
                 <NavLink title={"accueil"} url={"/"} />
                 <NavLink title={"bourses d'études"} url={"/bourse"} />
                 <NavLink title={"examens médicaux"} url={"/healthcare"} />
-                <NavLink title={"étudier en france"} url={"/country"} />
-                <NavLink title={"partenariat"} url={"/partenership"} />
                 <NavLink title={"à propos"} url={"/aboutUs"} />
               </div>
             </div>
@@ -104,8 +102,6 @@ const Header = () => {
               <NavLink title={"accueil"} url={"/"} />
               <NavLink title={"bourses d'études"} url={"/bourse"} />
               <NavLink title={"examens médicaux"} url={"/healthcare"} />
-              <NavLink title={"étudier en france"} url={"/country"} />
-              <NavLink title={"partenariat"} url={"/partenership"} />
               <NavLink
                 title={"Politique de Confidentialité"}
                 url={"/privacy"}
