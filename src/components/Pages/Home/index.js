@@ -71,13 +71,25 @@ const Home = ({ guideCountries, articles, scholarships }) => {
               Pourquoi RDC-Etudes ?
             </p>
             <p className="text-2xl my-4">
-              Lorem ipsum dolor sit amet consectetur. Facilisis ipsum velit urna
-              velit mauris in eget nisl. Porttitor ipsum eu auctor arcu. Urna
-              scelerisque aliquam augue aliquam non ultrices mauris et.
+              Nous vous accompagnons dans la réussite de votre projet d’études,
+              de l’admission à l’obtention de votre diplôme !
             </p>
             <PrimaryBtn text={"Demander une assistance"} />
+
+            <StaticImage
+              alt="plane"
+              className="-ml-32 -mt-20 -z-30"
+              height={400}
+              src="../../../images/png-clipart-black-airway-aviation-aircraft-removebg-preview.png"
+            />
+            <StaticImage
+              alt="plane"
+              height={200}
+              src="../../../images/Travel-PNG-File-Download-Free 1.png"
+            />
           </div>
         </div>
+
         <div className="-mt-28">
           <StaticImage
             height={1600}
@@ -89,24 +101,198 @@ const Home = ({ guideCountries, articles, scholarships }) => {
         </div>
       </div>
 
-      <div className="max-md:hidden bloc -mt-96">
-        <StaticImage
-          alt="plane"
-          className=""
-          height={400}
-          src="../../../images/png-clipart-black-airway-aviation-aircraft-removebg-preview.png"
-        />
-        <StaticImage
-          alt="plane"
-          height={150}
-          src="../../../images/Travel-PNG-File-Download-Free 1.png"
-        />
-      </div>
+      <section className="md:hidden mb-2" id="mobileStudycountry">
+        <div className="grid grid-cols-4 gap-2">
+          <div className="">&nbsp;</div>
+          <div className="">&nbsp;</div>
+          <div className="">&nbsp;</div>
+          <div className="">
+            <StaticImage
+              height={60}
+              alt="plane"
+              placeholder="blurred"
+              src="../../../images/earth-with-plane-drawing-png.png"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-8">
+          <div className="col-span-3">
+            <StaticImage
+              alt="travelers"
+              placeholder="blurred"
+              src="../../../images/4564198_2400445 1.png"
+            />
+          </div>
+
+          <div className="col-span-5 px-1">
+            <span className="text-sky-600 text-2xl font-black">
+              Où souhaitez-vous étudier ?
+            </span>{" "}
+            <p>
+              Choisissez le pays de votre destination pour votre projet de
+              voyage.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-4 gap-4">
+          <div className="">
+            <StaticImage
+              height={80}
+              placeholder="blurred"
+              alt="plane"
+              src="../../../images/pngtree-cartoon-paper-airplane-png-image_1195649-removebg-preview.png"
+            />
+          </div>
+          <div className="">&nbsp;</div>
+          <div className="">&nbsp;</div>
+          <div className="">
+            <StaticImage
+              height={80}
+              alt="tourist"
+              placeholder="blurred"
+              src="../../../images/Download_A_tourist_element_on_white_background_for_free-removebg-preview.png"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="hidden md:block" id="studycountry">
+        <div className="grid grid-cols-4 gap-2">
+          <div className="">&nbsp;</div>
+          <div className="">&nbsp;</div>
+          <div className="">&nbsp;</div>
+          <div className="">
+            <StaticImage
+              height={60}
+              alt="plane"
+              placeholder="blurred"
+              src="../../../images/earth-with-plane-drawing-png.png"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12">
+          <div className="col-span-1"></div>
+          <div className="col-span-5">
+            <StaticImage
+              alt="travelers"
+              placeholder="blurred"
+              src="../../../images/student.png"
+              className="h-[26rem] w-[26rem]"
+            />
+          </div>
+
+          <div className="col-span-6 py-16 mr-10">
+            <span className="text-sky-600 font-black text-5xl">
+              Où souhaitez-vous étudier ?
+            </span>{" "}
+            <p className="text-2xl py-6">
+              Choisissez le pays de votre destination pour votre projet de
+              voyage.
+              <p className="text-2xl py-2">
+                RDC Etudes vous oriente dans votre projet d'études du choix de
+                l'université jusqu'à l'obtention de votre visa.
+              </p>
+            </p>
+            <StaticImage
+              className="h-32 w-32 float-right"
+              alt="tourist"
+              placeholder="blurred"
+              src="../../../images/Download_A_tourist_element_on_white_background_for_free-removebg-preview.png"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-4 gap-4">
+          <div className="">
+            <StaticImage
+              height={80}
+              className="h-32 w-32 z-20 -mt-48"
+              placeholder="blurred"
+              alt="plane"
+              src="../../../images/pngtree-cartoon-paper-airplane-png-image_1195649-removebg-preview.png"
+            />
+          </div>
+          <div className="">&nbsp;</div>
+          <div className="">&nbsp;</div>
+          <div className="">
+          </div>
+        </div>
+      </section>
 
       <StudyCountry guideCountries={guideCountries} />
+
+      <div className="hidden md:grid md:grid-cols-12 mb-10">
+        <div className="col-span-5 flex w-full h-full mt-10">
+          <div className="-mt-28">
+            <div className={style.ellipse__second}>
+              <StaticImage
+                alt="Ellipse 6"
+                height={400}
+                src="../../../images/Ellipse2.png"
+              />
+            </div>
+          </div>
+
+          <div className="-ml-[17rem] -mt-10 z-30">
+            <StaticImage
+              alt="plane"
+              height={380}
+              src="../../../images/png-clipart-black-airway-aviation-aircraft-removebg-preview.png"
+            />
+          </div>
+
+          <div className="-ml-28">
+            <StaticImage
+              alt="plane"
+              height={400}
+              src="../../../images/lady_with_suitcase.png"
+            />
+          </div>
+        </div>
+
+        <div className="col-span-7 flex">
+          <div>
+            <p className="text-6xl font-black text-sky-600">Bourses d'études</p>
+            <p className="py-4 text-lg mr-[15rem]">
+              Voici les offres de bourses en cours trouvées pour vous avec ❤️
+              par l'équipe RDC Etudes.
+              <br />
+              Lorem ipsum dolor sit amet consectetur. Adipiscing habitant
+              consequat dolor dolor ornare eget. Non orci non urna scelerisque
+              non. Ridiculus diam tristique cursus vel. Platea facilisis eu urna
+              etiam. Nec mattis sed sed odio mattis. Sit vehicula molestie a
+              fringilla. In vestibulum enim id turpis feugiat at. In faucibus
+              duis odio aliquam. Orci condimentum venenatis cras vitae leo orci.
+              <br />
+              <br />
+              In vestibulum enim id turpis feugiat at. In faucibus duis odio
+              aliquam. Orci condimentum venenatis cras vitae leo orci.
+            </p>
+          </div>
+          <div className=" mt-40">
+            <StaticImage
+              alt="plane"
+              className="absolute right-0"
+              height={300}
+              src="../../../images/Ellipse1.png"
+            />
+
+            <StaticImage
+              alt="plane"
+              className="absolute right-10"
+              height={280}
+              src="../../../images/Young-Girl-Student-HD-Free-PNG-Image 1.png"
+            />
+          </div>
+        </div>
+      </div>
+
       <Scholarship scholarships={scholarships} />
 
-      <p className="text-center mb-10">
+      <p className="text-center mb-10 md:hidden">
         <PrimaryBtn
           href={"/bourse"}
           fontSize={"text-sm"}
@@ -118,9 +304,9 @@ const Home = ({ guideCountries, articles, scholarships }) => {
         </PrimaryBtn>
       </p>
 
-      <section className="mb-5">
+      <section className="mb-5 md:mx-32 md:mt-20">
         <div className="text-left px-8 mb-5">
-          <span className="text-sky-600 text-xl font-black uppercase">
+          <span className="text-sky-600 text-xl font-black uppercase md:text-2xl">
             Les dernières nouvelles
           </span>{" "}
           <div className="h-4 w-full border-b-2 border-sky-600"></div>
@@ -136,15 +322,15 @@ const Home = ({ guideCountries, articles, scholarships }) => {
         })}
       </section>
 
-      <section className="mb-5">
-        <div className="text-center">
-          <span className="text-sky-600 text-2xl font-black">
+      <section className="mb-5 md:mt-16">
+        <div className="text-center md:mb-10">
+          <span className="text-sky-600 text-2xl font-black md:text-4xl">
             Nos partenaires
           </span>{" "}
         </div>
 
-        <div className="container relative z-40 mx-auto px-2 ">
-          <div className="grid grid-cols-3 py-6 text-center">
+        <div className="container relative z-40 mx-auto ">
+          <div className="grid grid-cols-3 md:grid-cols-4 py-6 text-center md:mx-10">
             <div>
               <a href="/article/faire-une-formation-professionnelle-institut-a-l-institut-africain-de-haute-formation">
                 <StaticImage
@@ -194,16 +380,115 @@ const Home = ({ guideCountries, articles, scholarships }) => {
                 </p>
               </a>
             </div>
+
+            <div className="hidden md:flex">
+              <a href="/article/choisissez-medipol-university-pour-une-education-de-qualite-en-turquie">
+                <StaticImage
+                  src="../../../images/universite_de_lefke.webp"
+                  className="block mx-auto"
+                  placeholder="blurred"
+                  alt="logo"
+                  height={90}
+                  objectFit="contain"
+                />
+
+                <p className="text-xs font-medium capitalize font-body text-green-900 lg:text-lg md:text-base md:pt-6">
+                  UNIVERSITE EUROPEENNE DE LEFKE EN CHYPRE DU NORD
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mb-5">
-        <div className="text-center">
-          <span className="text-sky-600 text-2xl font-black">Témoignages</span>{" "}
+      <section className="mb-5 md:mt-16">
+        <div className="text-center md:py-10">
+          <span className="text-sky-600 text-2xl font-black md:text-4xl">
+            Témoignages
+          </span>{" "}
         </div>
 
-        <div className="mx-6 mt-5 rounded-2xl px-5 py-7 bg-sky-600">
+        <div className="hidden md:grid md:grid-cols-4 gap-4 mx-10">
+          <div className="rounded-2xl px-5 py-7 bg-sky-600">
+            <div className="z-10">
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                color="white"
+                className="text-6xl opacity-25"
+              />
+            </div>
+            <div className="z-20 -mt-7">
+              <p className="text-center text-sm md:text-lg text-white">
+                Lorem ispum dolor fortuna simpre cresis, out decresis vita
+                detastabilis Lorem ispum dolor fortuna simpre cresis, out
+                decresis
+              </p>
+              <p className="text-start text-white mt-4 md:text-lg">
+                Candidat X
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl px-5 py-7 bg-sky-600">
+            <div className="z-10">
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                color="white"
+                className="text-6xl opacity-25"
+              />
+            </div>
+            <div className="z-20 -mt-7">
+              <p className="text-center text-sm text-white md:text-lg">
+                Lorem ispum dolor fortuna simpre cresis, out decresis vita
+                detastabilis Lorem ispum dolor fortuna simpre cresis, out
+                decresis
+              </p>
+              <p className="text-start text-white mt-4 md:text-lg">
+                Candidat X
+              </p>
+            </div>
+          </div>
+          <div className="rounded-2xl px-5 py-7 bg-sky-600">
+            <div className="z-10">
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                color="white"
+                className="text-6xl opacity-25"
+              />
+            </div>
+            <div className="z-20 -mt-7">
+              <p className="text-center text-sm text-white md:text-lg">
+                Lorem ispum dolor fortuna simpre cresis, out decresis vita
+                detastabilis Lorem ispum dolor fortuna simpre cresis, out
+                decresis
+              </p>
+              <p className="text-start text-white mt-4 md:text-lg">
+                Candidat X
+              </p>
+            </div>
+          </div>
+          <div className="rounded-2xl px-5 py-7 bg-sky-600">
+            <div className="z-10">
+              <FontAwesomeIcon
+                icon={faQuoteLeft}
+                color="white"
+                className="text-6xl opacity-25"
+              />
+            </div>
+            <div className="z-20 -mt-7">
+              <p className="text-center text-sm text-white md:text-lg">
+                Lorem ispum dolor fortuna simpre cresis, out decresis vita
+                detastabilis Lorem ispum dolor fortuna simpre cresis, out
+                decresis
+              </p>
+              <p className="text-start text-white mt-4 md:text-lg">
+                Candidat X
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:hidden mx-6 mt-5 rounded-2xl px-5 py-7 bg-sky-600">
           <div className="z-10">
             <FontAwesomeIcon
               icon={faQuoteLeft}
